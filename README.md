@@ -11,7 +11,7 @@
 
 This is a ReactJS boilerplate project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The intention of this boilerplate is for creating a template with the essential libraries such as Typescript, React Query, Redux Thunk setup and ready to use right off the bat.
+The intention of this boilerplate is for creating a template with the essential libraries such as Typescript, React Query, Zustand setup and ready to use right off the bat.
 
 # 🧰 Prerequisites
 
@@ -68,9 +68,11 @@ yarn lint:fix
 - [ReactJS v17](https://reactjs.org/) - Frontend Javascript web framework
 - [TypeScript](https://www.typescriptlang.org/) - Open-source language which builds on JavaScript
 - [React Query](https://react-query.tanstack.com/) - Data fetching and caching library
-- [Redux Thunk](https://github.com/reduxjs/redux-thunk) - Redux state management middleware
+- [Zustand](https://github.com/pmndrs/zustand) - Zustand global state management
 
 # 👨🏻‍🎨 Author
 
 - **Irvin Ives Lau** - [lauirvin](https://github.com/lauirvin)
+- **Maurice Willis - [Immacio](https://github.com/Immacio)
 - https://www.irviniveslau.com
+- https://www.mauricewillis.xyz
