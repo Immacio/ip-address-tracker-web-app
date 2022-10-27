@@ -1,18 +1,5 @@
-import { UserDetailsActions, UserDetailsState, useUserDetailsStore } from '../../store';
+import styles from './styles.module.scss';
 
-const Home = (): JSX.Element => {
-  const { token, setToken } = useUserDetailsStore(
-    (state: UserDetailsState & UserDetailsActions) => state,
-  );
-
-  return (
-    <div>
-      {token}
-      <button type="button" onClick={() => setToken(Math.random().toString())}>
-        Set Token
-      </button>
-    </div>
-  );
-};
+const Home = (): JSX.Element => <div className={styles.container}>Home</div>;
 
 export default Home;
