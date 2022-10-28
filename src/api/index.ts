@@ -1,4 +1,6 @@
 import { SampleResponse } from '../types';
+import { IGeoLocationResponse } from '../types/GeoLocationResponse';
+import Config from '../Config';
 import axios from './axios';
 
 export const fetchSample = (): Promise<SampleResponse> =>
@@ -28,3 +30,8 @@ export const postSample = (name: string, result: string): Promise<SampleResponse
       error: err.response.data,
       data: null,
     }));
+
+export const fetchGeoLocationData = (ipAddress: string): Promise<IGeoLocationResponse> =>
+  axios
+    .get(`/api/v2/country,city?apiKey=${Config.apiKey}&ipAddress=${ipAddress}`)
+    .then(({ data }) => data);

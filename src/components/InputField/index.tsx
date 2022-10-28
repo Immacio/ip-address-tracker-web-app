@@ -6,9 +6,10 @@ import styles from './styles.module.scss';
 interface Props {
   placeholder: string;
   setInputValue: (value: string) => void;
+  onClick: () => void;
 }
 
-export const InputField = memo<Props>(({ placeholder, setInputValue }) => (
+export const InputField = memo<Props>(({ placeholder, setInputValue, onClick }) => (
   <div className={styles.container}>
     <input
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +18,13 @@ export const InputField = memo<Props>(({ placeholder, setInputValue }) => (
       type="text"
       placeholder={placeholder}
     />
-    <div className={styles.buttonSubmitContainer}>
+    <div
+      role="button"
+      onKeyDown={() => null}
+      tabIndex={0}
+      onClick={onClick}
+      className={styles.buttonSubmitContainer}
+    >
       <ReactSVG src={arrowIcon} />
     </div>
   </div>

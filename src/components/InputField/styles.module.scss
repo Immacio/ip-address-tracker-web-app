@@ -1,13 +1,15 @@
 @import '../../styles/colors';
+@import '../../styles/media-queries';
 
 .container {
   width: 100%;
   display: flex;
+  justify-content: center;
 
   input[type='text'] {
-    width: 100%;
+    width: 40rem;
     box-sizing: border-box;
-    padding: 2rem;
+    padding: 1.5rem;
     outline: none;
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
@@ -29,5 +31,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .buttonSubmitContainer:hover {
+    opacity: 0.8;
+  }
+}
+
+@include mobile {
+  .container {
+    input::placeholder {
+      font-size: 1.4rem;
+    }
   }
 }

@@ -1,5 +1,6 @@
 @import '../../styles/typography';
 @import '../../styles/colors';
+@import '../../styles/media-queries';
 
 .container {
   display: flex;
@@ -28,11 +29,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 3rem;
 
     h1 {
       color: $White;
       font-size: 3.2rem;
       font-weight: 500;
+    }
+  }
+}
+
+@include mobile {
+  .headerContainer {
+    height: 45vh;
+
+    &Content {
+      h1 {
+        font-size: 2.5rem;
+      }
     }
   }
 }
