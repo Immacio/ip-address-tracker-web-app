@@ -1,7 +1,7 @@
 $max-width-desktop: 1180px;
 $screen-md-max: 991px;
 $screen-sm-max: 575px;
-$screen-sm-min: 320px;
+$screen-sm-min: 375px;
 
 // Large device (small desktop, 992px - 1180px)
 @mixin desktop {
@@ -24,7 +24,7 @@ $screen-sm-min: 320px;
   }
 }
 
-// Extra small device (mobile, 0 - 320px)
+// Extra small device (mobile, 0 - 375px)
 @mixin small-mobile {
   @media screen and (max-width: $screen-sm-min) {
     @content;
