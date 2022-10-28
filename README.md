@@ -73,6 +73,6 @@ yarn lint:fix
 # 👨🏻‍🎨 Author
 
 - **Irvin Ives Lau** - [lauirvin](https://github.com/lauirvin)
-- **Maurice Willis - [Immacio](https://github.com/Immacio)
+- **Maurice Willis** (Contributor) - [Immacio](https://github.com/Immacio)
 - https://www.irviniveslau.com
 - https://www.mauricewillis.xyz
