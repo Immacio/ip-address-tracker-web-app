@@ -2,6 +2,7 @@ export type Styles = {
   container: string;
   headerContainer: string;
   headerContainerContent: string;
+  mapContainer: string;
 };
 
 export type ClassNames = keyof Styles;

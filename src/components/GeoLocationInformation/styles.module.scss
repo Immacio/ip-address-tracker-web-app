@@ -11,12 +11,13 @@
   max-width: 100rem;
   min-height: 10rem;
   box-shadow: 0px 9px 12px -5px $DarkGray;
+  z-index: 10;
 }
 
 .innerContainer {
   display: flex;
   gap: 2rem;
-  padding: 5rem;
+  padding: 5rem 3rem;
 }
 
 .infoContainer {
@@ -44,6 +45,14 @@
   opacity: 0.3;
 }
 
+.skeletonLoader {
+  width: 17rem;
+
+  &Main {
+    height: 3.5rem;
+  }
+}
+
 @include mobile {
   .container {
     width: 100%;
@@ -65,5 +74,9 @@
     span {
       font-size: 2rem;
     }
+  }
+
+  .skeletonLoaderMain {
+    height: 2.35rem;
   }
 }

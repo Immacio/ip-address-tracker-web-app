@@ -3,6 +3,8 @@ export type Styles = {
   divider: string;
   infoContainer: string;
   innerContainer: string;
+  skeletonLoader: string;
+  skeletonLoaderMain: string;
 };
 
 export type ClassNames = keyof Styles;

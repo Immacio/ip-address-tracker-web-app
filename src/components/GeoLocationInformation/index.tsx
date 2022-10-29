@@ -1,4 +1,6 @@
 import { Fragment, memo } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { ILocation } from '../../types/GeoLocationResponse';
 import styles from './styles.module.scss';
 
@@ -8,11 +10,10 @@ interface Props {
   autonomousSystem?: string;
   location?: ILocation;
   isLoading: boolean;
-  isRefetching: boolean;
 }
 
 export const GeoLocationInformation = memo<Props>(
-  ({ isp, userIpAddress, location, isLoading, isRefetching }) => {
+  ({ isp, userIpAddress, location, isLoading }) => {
     const geoLocationData: {
       title: string;
       value: string | undefined;
@@ -27,7 +28,7 @@ export const GeoLocationInformation = memo<Props>(
       },
       {
         title: 'Timezone',
-        value: location?.timezone,
+        value: `UTC ${location?.timezone}`,
       },
       {
         title: 'ISP',
@@ -42,7 +43,14 @@ export const GeoLocationInformation = memo<Props>(
             <Fragment key={title}>
               <div className={styles.infoContainer}>
                 <h1>{title}</h1>
-                <span>{value}</span>
+                {isLoading ? (
+                  <Skeleton
+                    className={styles.skeletonLoaderMain}
+                    containerClassName={styles.skeletonLoader}
+                  />
+                ) : (
+                  <span>{value}</span>
+                )}
               </div>
               {index !== geoLocationData.length - 1 && <div className={styles.divider} />}
             </Fragment>
