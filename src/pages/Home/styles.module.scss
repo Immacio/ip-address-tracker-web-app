@@ -11,7 +11,7 @@
 .headerContainer {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  height: 30vh;
   width: 100%;
   position: relative;
 
@@ -45,9 +45,15 @@
   z-index: 1;
 }
 
+@include tablet {
+  .headerContainerContent {
+    margin: 0 12rem;
+  }
+}
+
 @include mobile {
   .headerContainer {
-    height: 45vh;
+    height: 40vh;
 
     &Content {
       h1 {
