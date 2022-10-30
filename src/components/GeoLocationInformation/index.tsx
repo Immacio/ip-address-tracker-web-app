@@ -24,7 +24,7 @@ export const GeoLocationInformation = memo<Props>(
       },
       {
         title: 'Location',
-        value: location?.city,
+        value: `${location?.city}, ${location?.country} ${location?.postalCode}`,
       },
       {
         title: 'Timezone',
