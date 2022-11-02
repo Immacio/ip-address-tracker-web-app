@@ -11,7 +11,9 @@
 .headerContainer {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  height: 25rem;
+  min-height: 25rem;
+  max-height: 25rem;
   width: 100%;
   position: relative;
 
